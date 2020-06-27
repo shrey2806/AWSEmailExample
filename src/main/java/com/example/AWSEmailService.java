@@ -18,9 +18,7 @@ public class AWSEmailService {
 		// Adding Destination of Email.
 		// Here One recipient is added , multiple recipients can be added at same time. 
 		
-		Destination destination = new Destination().withToAddresses(new String[] {
-																		TO}
-																	);
+		Destination destination = new Destination().withToAddresses(new String[] {TO});
 		
 		// Creating Subject and Body
 		Content subject = new Content().withData(SUBJECT);
@@ -35,15 +33,11 @@ public class AWSEmailService {
 		
 	}
 	
-public static void main(String args[])throws IOException{
+    public static void main(String args[])throws IOException{
 		
 	
 	
-		SendEmailRequest request = setEmailRequest(EmailUtil.TO, 
-												  EmailUtil.FROM, 
-												  EmailUtil.BODY,
-												  EmailUtil.SUBJECT);
-	
+		SendEmailRequest request = setEmailRequest(EmailUtil.TO,EmailUtil.FROM, EmailUtil.BODY,EmailUtil.SUBJECT);
 		
 		try {
 			// 
